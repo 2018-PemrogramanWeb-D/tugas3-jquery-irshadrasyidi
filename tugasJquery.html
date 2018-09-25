@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tugas Jquery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".but-1").click(function() {
+                $("p.1").fadeIn(900);
+            });
+
+            $(".but-2").click(function() {
+                $("p.1").fadeOut(900);
+            });
+            
+            $("h1.1").on({
+                mouseenter: function(){
+                    $("h1.1").css("background-color", "blue", "pointer");
+                },
+                mouseleave: function(){
+                    $("h1.1").css("background-color", "green");
+                },
+                click: function(){
+                    $("p.2").slideToggle("slow");
+                }
+            })
+
+            $("h1.2").click(function() {
+                $("h1.2").text("Thank you!");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p class="1" style="background-color:cornsilk;">Sebuah paragraf</p>
+    <button class="but-1">Tampilkan</button>
+    <button class="but-2">Sembunyikan</button>
+    <h1 class="1" style="background-color: green; text-align: center">
+        click me!!
+    </h1>
+    <p class="2" style="background-color: black; display: none;
+    color: white;">Ciluk Ba</p>
+    <h1 class="2" style="background-color: red; text-align: center">
+            click me V2.0!!
+    </h1>
+    <table style="border: 5px solid blue; width: 100%">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+</html>
